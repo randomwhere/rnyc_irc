@@ -178,6 +178,10 @@ def translate(self, user, channel, args):
 
 
 def define(self, user, channel, args):
+    """ Special definition just for crispyanity"""
+    if args:
+        data = "crispy"
+        self.msg(channel, "crispy is defined as hispanic. problem? ;D")
     """ Defines a word using the Wiktionary API """
     if args:
         data = json.load(urllib2.urlopen(
